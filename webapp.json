@@ -129,9 +129,20 @@
                     },
                     "location": "[resourceGroup().location]",
                     "properties": {
-                        
+                        "ConnectionString": {
+                            "value": "[concat('Database=', variables('databaseName'), ';Data Source=', variables('serverName'), '.mysql.database.azure.com',';User Id=',parameters('administratorLogin'),'@',variables('serverName') ,';Password=',parameters('administratorLoginPassword'))]",
+                            "type": "MySql"
+                        },
+                        "defaultNamespaceConnectionString": {
+                            "type": "Custom",
+                            "value": "[listkeys(variables('authRuleResourceId'), '2017-04-01').primaryConnectionString]" 
+                        },
+                        "EventHubConnectionString": {
+                            "type": "Custom",
+                            "value": "[listkeys(variables('ehAuthorizationRuleId1'), '2017-04-01').primaryConnectionString]"
+                        },
                         "NamespaceConnectionString": {
-                             "type": "string",
+                            "type": "Custom",
                             "value": "[listkeys(variables('nsAuthorizationRuleId'), '2017-04-01').primaryConnectionString]"
                         }
                     }
