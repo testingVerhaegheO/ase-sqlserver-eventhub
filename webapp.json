@@ -64,7 +64,8 @@
         "serverName": "[concat(parameters('siteName'), 'mysqlserver')]",
         "appInsightsName": "[concat(parameters('siteName'), 'AppInsights')]",
         "hostingPlanName": "[concat(parameters('siteName'), 'ServicePlan')]",
-        "authRuleResourceId": "[resourceId('Microsoft.EventHub/namespaces/authorizationRules', parameters('namespaceName'), variables('defaultSASKeyName'))]"
+        "authRuleResourceId": "[resourceId('Microsoft.EventHub/namespaces/authorizationRules', parameters('namespaceName'), variables('defaultSASKeyName'))]",
+        "ehAuthorizationRuleId1": "[resourceId('Microsoft.EventHub/namespaces/eventhubs/authorizationRules', parameters('namespaceName'),parameters('eventHubName'), parameters('eventhubAuthorizationRuleName'))]"
     },
     "resources": [
         {
