@@ -16,6 +16,9 @@
     },
     "eventhubAuthorizationRuleName": {
       "value": "testingVerhaegheO02eventhub0AuthorizationRuleName"
+    },
+    "eventHubName": {
+      "value": "testingVerhaegheO02EventhubName"
     }
   }
 }

@@ -62,6 +62,12 @@
           "metadata": {
             "description": "Name of Eventhub Authorization Rule"
           }
+        },
+        "eventHubName": {
+          "type": "string",
+          "metadata": {
+            "description": "Name of Event Hub"
+          }
         }
     },
     "variables": {
