@@ -16,12 +16,6 @@
     },
     "eventhubAuthorizationRuleName": {
       "value": "testingVerhaegheO02eventhub0AuthorizationRuleName"
-    },
-    "eventhubAuthorizationRuleName": {
-      "type": "string",
-      "metadata": {
-        "description": "Name of Eventhub Authorization Rule"
-      }
     }
   }
 }
