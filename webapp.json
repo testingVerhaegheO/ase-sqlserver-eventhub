@@ -64,7 +64,7 @@
         "serverName": "[concat(parameters('siteName'), 'mysqlserver')]",
         "appInsightsName": "[concat(parameters('siteName'), 'AppInsights')]",
         "hostingPlanName": "[concat(parameters('siteName'), 'ServicePlan')]",
-        "authRuleResourceId": "[reference(resourceId('Microsoft.EventHub/namespaces/authorizationRules', parameters('namespaceName'), variables('defaultSASKeyName')))]"
+        "authRuleResourceId": "[resourceId('Microsoft.EventHub/namespaces/authorizationRules', parameters('namespaceName'), variables('defaultSASKeyName'))]"
     },
     "resources": [
         {
