@@ -79,8 +79,7 @@
     "defaultSASKeyName": "RootManageSharedAccessKey",
     "authRuleResourceId": "[resourceId('Microsoft.EventHub/namespaces/authorizationRules', parameters('namespaceName'), variables('defaultSASKeyName'))]",
     "nsAuthorizationRuleId": "[resourceId('Microsoft.EventHub/namespaces/authorizationRules', parameters('namespaceName'), parameters('namespaceAuthorizationRuleName'))]",
-    "ehAuthorizationRuleId1": "[resourceId('Microsoft.EventHub/namespaces/eventhubs/authorizationRules', parameters('namespaceName'),parameters('eventHubName'), parameters('eventhubAuthorizationRuleName'))]",
-    "ehAuthorizationRuleId2": "[resourceId('Microsoft.EventHub/namespaces/eventhubs/authorizationRules', parameters('namespaceName'),parameters('eventHubName'), parameters('eventhubAuthorizationRuleName1'))]"
+    "ehAuthorizationRuleId1": "[resourceId('Microsoft.EventHub/namespaces/eventhubs/authorizationRules', parameters('namespaceName'),parameters('eventHubName'), parameters('eventhubAuthorizationRuleName'))]"
   },
   "resources": [
     {
